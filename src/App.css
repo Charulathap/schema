@@ -1,38 +1,435 @@
 .App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  align-items: center;
+  height: 100vh;
+  background-color: #f0f0f0;
+}
+
+.savingHeading {
+  background-color: #1ebfd8;
+  padding: 20px;
+  color: white !important;
+}
+
+button {
+  padding: 8px 16px;
+  font-size: 16px;
+  color: #007b8f;
+  background: #fff;
+  border: 2px solid #007b8f;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #007b8f;
+  color: #fff;
+}
+
+.popup {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 350px;
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  padding: 20px;
+  z-index: 1000;
+}
+
+.popup h2 {
+  color: #007b8f;
+  font-size: 18px;
+  margin-bottom: 16px;
+}
+
+.popup-content label {
+  display: block;
+  margin-bottom: 10px;
+  font-size: 14px;
+  color: #333;
+}
+
+input[type="text"] {
+  width: 100%;
+  padding: 8px;
+  margin-top: 4px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 14px;
+}
+
+.schema-dropdown {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 16px;
+}
+
+.schema-dropdown select {
+  width: 130%;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 14px;
+}
+
+.blue-box {
+  margin-top: 20px;
+  padding: 12px;
+  border: 1px solid #007b8f;
+  border-radius: 8px;
+}
+
+.schema-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.schema-item select {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 14px;
+}
+
+button + button {
+  margin-top: 12px;
+  background: #ff5c5c;
+  color: #fff;
+  border: none;
+}
+
+button + button:hover {
+  background: #e04444;
+}
+
+button.link-style {
+  background: none;
+  border: none;
+  color: #007b8f;
+  font-size: 14px;
+  cursor: pointer;
+  text-decoration: underline;
+  padding: 0;
+}
+
+button.link-style:hover {
+  color: #005f6b;
+  text-decoration: none;
+}
+.popup-content {
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  max-width: 400px;
+  margin: auto;
+}
+
+.schema-dropdown {
+  margin-bottom: 10px;
+}
+
+.schema-dropdown label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.link-style {
+  background: none;
+  border: none;
+  color: #007b8f;
+  font-size: 14px;
+  cursor: pointer;
+  text-decoration: underline;
+  padding: 0;
+  display: inline-block;
+  margin-top: 5px;
+}
+
+.link-style:hover {
+  color: #005f6b;
+  text-decoration: none;
+}
+
+/* Button styling */
+button {
+  padding: 8px 16px;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 4px;
+  border: none;
+}
+
+.save-button {
+  background-color: #076507; /* Lime green */
+  color: #ffffff;
+  height: 40px;
+  margin-top: 12px;
+  margin-left: 0px;
+}
+
+.save-button:hover {
+  background-color: whitesmoke;
+  color: #076507;
+}
+
+.cancel-button {
+  background-color: #ffffff;
+  color: #ff5c5c;
+  border: none;
+  margin-left: 10px;
+  height: 40px;
+}
+
+.cancel-button:hover {
+  background-color: #ff5c5c;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+/* Link-style button */
+.link-style {
+  background: none;
+  border: none;
+  color: #007b8f;
+  font-size: 14px;
+  cursor: pointer;
+  text-decoration: underline;
+  padding: 0;
+  margin-top: 5px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.link-style:hover {
+  color: #005f6b;
+  text-decoration: none;
+}
+
+/* Button group to align Save and Cancel buttons in a row */
+.button-group {
+  display: flex;
+  justify-content: flex-start;
+  margin-top: 20px;
+}
+
+.bullet {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  margin-right: 5px;
+}
+
+.red-bullet {
+  background-color: red;
+}
+
+.green-bullet {
+  background-color: green;
+}
+.blue-box {
+  margin-top: 20px;
+}
+
+.schema-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.bullet {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+.red-bullet {
+  background-color: red;
+}
+
+.green-bullet {
+  background-color: green;
+}
+
+.trait-text {
+  font-weight: bold;
+  margin-left: 5px;
+}
+
+.schema-item select {
+  padding: 5px;
+  font-size: 14px;
+  width: 200px;
+}
+
+.traits-section {
+  display: flex;
+  align-items: space-between;
+  margin-bottom: 15px;
+}
+
+.traits-section span {
+  font-size: 14px;
+  font-weight: 500;
+}
+.group-traits,
+.user-traits {
+  font-size: 16px;
+  margin-right: 20px;
+  display: flex;
+  align-items: center;
+  margin-left: 10px;
+}
+.group-traits-section,
+.user-traits-section {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.user-traits-section span {
+  margin-right: 20px;
+}
+.user-traits-section .bullet {
+  margin-left: 70px;
+}
+
+.blue-box {
+  margin-top: 20px;
+}
+
+.schema-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.schema-dropdown {
+  display: flex;
+  align-items: center;
+}
+select {
+  padding: 5px;
+  font-size: 14px;
+  width: 200px; /* Adjust width of the dropdown */
+}
+.bullet {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  display: inline-block;
+  margin-right: 8px; /* Spacing between bullet and dropdown */
+}
+
+.red-bullet {
+  background-color: red;
+}
+
+.green-bullet {
+  background-color: green;
+}
+
+.white-bullet {
+  background-color: rgb(227, 223, 223); /* White bullet color */
+}
+.trait-text {
+  font-weight: bold;
+  margin-left: 5px;
+}
+
+.group-traits-section,
+.user-traits-section {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.schema-item select {
+  padding: 5px;
+  font-size: 14px;
+  width: 200px;
+}
+
+/* Styling for remove button (minus sign) */
+.remove-button {
+  background: none;
+  border: none;
+  color: rgb(86, 84, 84); /* You can change this color */
+  font-size: 18px;
+  margin-left: 10px;
+  cursor: pointer;
+}
+.remove-schema-button {
+  background: none;
+  border: none;
+  font-size: 20px; /* Adjust the size as needed */
+  cursor: pointer;
+  color: #333; /* Set your desired color */
+}
+
+.remove-schema-button:hover {
+  background-color: red;
+  margin-left: 5px;
+}
+.remove-icon {
+  font-size: 24px;
+}
+
+.schema-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.blue-box {
+  border: 2px solid #007b8f;
+  padding: 10px;
+  margin-top: 20px;
+}
+
+.red-bullet {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: red;
+  margin-right: 8px;
+}
+
+.green-bullet {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: green;
+  margin-right: 8px;
+}
+
+.white-bullet {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: rgb(227, 223, 223);
+  margin-right: 8px;
+}
+
+.button-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+  width: 360px;
+  height: 400px;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 330px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px #007b8f;
+  padding: 20px;
+  z-index: 1000;
 }
