@@ -1,9 +1,9 @@
 ## Project Title :: Segment Builder
 
-**Overview**
-    This project consists of both a frontend and backend, designed to manage and display segment data. This README provides the setup instructions, dependencies, and usage details to run the project locally.
+### Overview
+   This project consists of both a frontend and backend, designed to manage and display segment data. This README provides the setup instructions, dependencies, and usage details to run the project locally.
 
-**Prerequisites**
+## Prerequisites
   Before setting up the project, ensure you have the following installed:
     i) Node.js (includes npm)
    ii) npm (Node Package Manager)
