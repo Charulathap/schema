@@ -1,70 +1,70 @@
-# Getting Started with Create React App
+## Project Title :: Segment Builder
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+**Overview**
+    This project consists of both a frontend and backend, designed to manage and display segment data. This README provides the setup instructions, dependencies, and usage details to run the project locally.
 
-## Available Scripts
+**Prerequisites**
+  Before setting up the project, ensure you have the following installed:
+    i) Node.js (includes npm)
+   ii) npm (Node Package Manager)
 
-In the project directory, you can run:
+**Getting Started**
+## Backend Setup
 
-### `npm start`
+1. **Navigate to the Backend Directory**
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+   Open a terminal in the root directory and navigate to the backend folder:
+    
+   ```bash
+   cd backend
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+2. **Install Required Dependencies**
 
-### `npm test`
+   Install the backend dependencies:
+   ```bash
+   npm install express cors node-fetch
+        
+3. **Start the Backend Server**
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+    Run the backend server:
+    ```bash
+    node server.js
+    
+Keep this terminal open to maintain the backend server running.
 
-### `npm run build`
+## Frontend Setup
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+1. **Navigate to the Project Root Directory**
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+   Open a new terminal or PowerShell window in the project’s root directory.
+   
+2. **Start the Frontend Server**
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+   Run the following command to start the frontend:
+   ```bash
+   npm start
+   
+3. **Running the Project**
 
-### `npm run eject`
+  *Important:* Always start the backend server before the frontend to ensure connectivity.
+  Once both servers are running, open the project in your browser as directed by the frontend server output.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+** ## Features**
+**Saving a Segment**
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+  i) After adding a segment in the frontend interface, click the Save Segment button.
+ ii) This will send the segment data to a predefined webhook URL, which can be accessed to view the data.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+** Viewing the Saved Segment**
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+    Visit the webhook URL (https://webhook.site/#!/view/bad71faa-86a3-4bce-b4c8-96d40fc024a3/8ff555c4-98b4-4230-a46a-af4dd94a1985/1) to see the saved segment in JSON format.
 
-## Learn More
+**Notes**
+  Run the backend server first, followed by the frontend server.
+  Keep both terminals open to ensure the servers stay active.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+  
 
-To learn React, check out the [React documentation](https://reactjs.org/).
 
-### Code Splitting
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+     
