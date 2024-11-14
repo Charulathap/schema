@@ -55,7 +55,7 @@ Keep this terminal open to maintain the backend server running.
 * After adding a segment in the frontend interface, click the Save Segment button.
 * This will send the segment data to a predefined webhook URL, which can be accessed to view the data.
 
-** Viewing the Saved Segment**
+ **Viewing the Saved Segment**
 
     Visit the webhook URL (https://webhook.site/#!/view/bad71faa-86a3-4bce-b4c8-96d40fc024a3/8ff555c4-98b4-4230-a46a-af4dd94a1985/1) to see the saved segment in JSON format.
 
